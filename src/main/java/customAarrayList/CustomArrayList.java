@@ -84,7 +84,7 @@ public class CustomArrayList<E> implements Custom<E> {
      * Private method for check size of elements array
      * */
     private boolean checkSize(int index) {
-        if(index < elements.length) {
+        if(index <= elements.length ) {
             return true;
         }else{
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + elements.length);
@@ -153,7 +153,7 @@ public class CustomArrayList<E> implements Custom<E> {
     }
 
     /**
-     * Private method for sort(Comparator<? super E> c);
+     * Private method for sort(Comparator c);
      * Quicksort is a sorting algorithm, which is leveraging the divide-and-conquer principle.
      * It has an average O(n log n) complexity and it’s one of the most used sorting algorithms,
      * especially for big data volumes.

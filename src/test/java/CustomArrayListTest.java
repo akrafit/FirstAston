@@ -22,6 +22,11 @@ public class CustomArrayListTest extends TestCase {
         list.add(1, "test3");
         assertEquals("test3", list.get(1));
     }
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testAddByIndexException(){
+        list.add("test");
+        list.add(3,"test4");
+    }
 
     @Test
     public void testOnCycle() {
